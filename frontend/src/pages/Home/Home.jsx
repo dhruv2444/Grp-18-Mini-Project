@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, Brain, Target, TrendingUp, Users, Play, CheckCircle, Menu, X } from 'lucide-react';
-
+import { Link } from "react-router-dom";
 const Home = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -26,10 +26,12 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center">
-                Start Your Journey
-                <Play className="ml-2 h-5 w-5" />
-              </button>
+              <Link 
+                to="/uploads"
+                className="bg-gradient-to-r from-indigo-600 to-purple-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 inline-block"
+              >
+              Start Your Free Trial
+              </Link>
               
               <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:border-indigo-600 hover:text-indigo-600 hover:-translate-y-1 transition-all duration-300">
                 Watch Demo

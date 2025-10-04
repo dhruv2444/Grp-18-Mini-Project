@@ -5,7 +5,7 @@ import Login from './pages/Login/Login'
 import Signup from './pages/Signin/Signup'
 import { Toaster } from 'react-hot-toast'
 import Home from './pages/Home/Home'
-
+import FileUpload from './pages/uploads/upload'
 const App = () => {
   return (
 
@@ -19,7 +19,7 @@ const App = () => {
         <Route path='/' element = {<Home/>}/>
         <Route path='/login' element = {<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
-        
+        <Route path='/uploads' element={<FileUpload />} />
       </Routes>
        <Toaster/>
     </div>
