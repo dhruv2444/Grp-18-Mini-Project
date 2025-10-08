@@ -10,17 +10,13 @@ const Signup = () => {
 
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+   e.preventDefault();
     if (password !== confirmPassword) {
       alert("Passwords don't match")
       return
     }
-    setLoading(true)
-    // Simulate API call
-    setTimeout(() => {
-      setLoading(false)
-      alert('Account created successfully!')
-    }, 2000)
+   await signup(firstName,lastName,email,password)
   }
 
   return (
